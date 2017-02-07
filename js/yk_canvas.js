@@ -55,7 +55,7 @@ myCanvas.prototype={
 
 			//转化为字符串 存储在本地
 			localStorage.dataCavans = JSON.stringify(that.data);
-
+			window.location.href =	"draw.html"; 
 
 		});	
 	},
@@ -80,7 +80,7 @@ myCanvas.prototype={
 				that.cobj.beginPath() & that.cobj.moveTo(pp.x,pp.y);
 				return;
 			}
-			that.cobj.quadraticCurveTo(p.x,p.y,(pp.x+p.x)/2,((pp.y+p.y)/2));
+			that.cobj.quadraticCurveTo(pp.x,pp.y,(pp.x+p.x)/2,((pp.y+p.y)/2));
 			that.cobj.stroke();
 			pp = p;
 			x++;
